@@ -65,6 +65,50 @@ main.main {
   padding-right: 2.4rem;
   display: flex;
   flex-direction: column;
-
   gap: 2.4rem;
 }
+
+section .main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .main-title h1{
+    margin: 0;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    line-height: 1;
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: var(--Navy_900);
+    padding: 1.4rem 2rem;
+    border-radius: 5px;
+}
+
+ .circle-decoration{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid var(--Purple_700);
+    cursor: pointer;
+}
+
+#todo-input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--Gray_50);
+    font-family: inherit;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+
