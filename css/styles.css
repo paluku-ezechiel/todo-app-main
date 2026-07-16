@@ -9,7 +9,7 @@
 :root {
   font-size: 62.5%;
   --Blue_500: hsl(220, 98%, 61%);
-  --Check_Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --Check_Background: linear-gradient (hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   --Gray_50: hsl(0, 0%, 98%);
   --Purple_300: hsl(234, 39%, 85%);
   --Gray_300: hsl(233, 11%, 84%);
@@ -29,4 +29,9 @@
 body {
   font-size: 1.8rem;
   font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  background: var(--Navy_950);
+  background-image: url("/images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
 }
