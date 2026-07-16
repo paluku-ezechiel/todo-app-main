@@ -5,7 +5,7 @@ const ul = document.querySelector("#todo-list");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const value = input.value;
-  addTodo(value)
+  addTodo(value);
   input.value = "";
 });
 
@@ -49,6 +49,16 @@ const createTodoElement = (todo, index) => {
   deleteBtn.appendChild(img);
   li.append(todoItemLeft, deleteBtn);
   return li;
+};
+
+let currentId = 0;
+const addTodo = (text) => {
+  todos.push({
+    id: currentId++,
+    text,
+  });
+
+  fetchTodo();
 };
 
 fetchTodo();
