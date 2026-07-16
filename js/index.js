@@ -40,6 +40,9 @@ const createTodoElement = (todo, index) => {
 
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("delete-btn");
+  deleteBtn.addEventListener("click", () => {
+    deleteTodo(index);
+  });
 
   const img = document.createElement("img");
   img.src = "./images/icon-cross.svg";
@@ -58,6 +61,11 @@ const addTodo = (text) => {
     text,
   });
 
+  fetchTodo();
+};
+
+const deleteTodo = (index) => {
+  todos.splice(index, 1);
   fetchTodo();
 };
 
