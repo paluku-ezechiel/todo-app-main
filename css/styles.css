@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --Blue_500: hsl(220, 98%, 61%);
+  --Check_Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --Gray_50: hsl(0, 0%, 98%);
+  --Purple_300: hsl(234, 39%, 85%);
+  --Gray_300: hsl(233, 11%, 84%);
+  --Gray_600: hsl(236, 9%, 61%);
+  --Navy_850: hsl(235, 19%, 35%);
+
+  --Navy_950: hsl(235, 21%, 11%);
+  --Navy_900: hsl(235, 24%, 19%);
+  --Purple_300: hsl(234, 39%, 85%);
+  --Purple_100_hover: hsl(236, 33%, 92%);
+  --Purple_600: hsl(235, 16%, 43%);
+  --Purple_700: hsl(233, 14%, 35%);
+  --Purple_800: hsl(237, 14%, 26%);
+  --Gray_600: hsl(236, 9%, 61%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
