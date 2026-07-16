@@ -56,3 +56,15 @@ a {
   color: #333;
 }
 
+main.main {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  padding-top: 7rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.4rem;
+}
