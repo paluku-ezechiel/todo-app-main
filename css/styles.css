@@ -137,3 +137,13 @@ section .main-title h1 {
   font-size: 1.8rem;
   margin: 0;
 }
+
+.checked {
+  background-image: url("/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.completed-text{
+  text-decoration: line-through;
+}
