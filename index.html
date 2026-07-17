@@ -55,7 +55,7 @@
       </section>
       <section class="todo-list-section">
         <ul id="todo-list">
-          <li class="todo-item">
+          <!-- <li class="todo-item">
             <div class="todo-item-left">
               <span class="circle-decoration"></span>
               <p class="todo-text">Complite online JavaScript course</p>
@@ -63,8 +63,20 @@
             <button class="delete-btn">
               <img src="./images/icon-cross.svg" alt="delete todo" />
             </button>
-          </li>
+          </li> -->
         </ul>
+        <div class="todo-footer">
+          <span id="items-left"></span>
+          
+          <!-- Filtres (Souvent déportés en dessous sur Mobile, mais côte à côte sur Desktop) -->
+          <div class="todo-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+          </div>
+      
+          <button id="clear-completed">Clear Completed</button>
+        </div>
       </section>
     </main>
     <!-- Todo -->

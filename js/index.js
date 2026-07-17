@@ -1,6 +1,20 @@
 const form = document.querySelector("form");
 const input = document.querySelector("#todo-input");
 const ul = document.querySelector("#todo-list");
+const itemsLeft = document.querySelector("#items-left");
+const clearCompleted = document.querySelector("#clear-completed");
+const filterBtns = document.querySelectorAll(".filter-btn");
+let currentFilter = "all";
+
+filterBtns.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const target = e.target;
+    const value = target.dataset.filter;
+    currentFilter = value;
+
+    fetchTodo();
+  });
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -10,18 +24,38 @@ form.addEventListener("submit", (e) => {
   input.value = "";
 });
 
-const todos = [
+clearCompleted.addEventListener("click", (e) => {
+  if (todos.length) {
+    todos = todos.filter((el) => el.completed === false);
+  }
+  fetchTodo();
+});
+
+let todos = [
   { id: 1, text: "Complete only javascript course", completed: false },
   { id: 2, text: "Drag and drop to reorder list", completed: false },
   { id: 3, text: "Read for 1 hour", completed: false },
 ];
 
 const fetchTodo = () => {
-  const todoNodes = todos.map((todo) => {
+  let tableauAAfficher;
+
+  if (currentFilter === "active") {
+    tableauAAfficher = todos.filter((el) => el.completed === false);
+  } else if (currentFilter === "completed") {
+    tableauAAfficher = todos.filter((el) => el.completed === true);
+  } else {
+    tableauAAfficher = todos;
+  }
+
+  const todoNodes = tableauAAfficher.map((todo) => {
     return createTodoElement(todo);
   });
   ul.innerHTML = "";
   ul.append(...todoNodes);
+  const activeTodos = todos.filter((el) => el.completed === false);
+  const count = activeTodos.length;
+  itemsLeft.innerText = `${count} items left`;
 };
 
 const createTodoElement = (todo) => {
@@ -85,7 +119,6 @@ const deleteTodo = (id) => {
 
 const toggleCircleDecoration = (id) => {
   const todo = todos.find((todo) => todo.id === id);
-  console.log(todo);
   if (todo) {
     todo.completed = !todo.completed;
   } else {

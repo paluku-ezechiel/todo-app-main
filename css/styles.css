@@ -144,6 +144,49 @@ section .main-title h1 {
   background-size: cover;
 }
 
-.completed-text{
+.completed-text {
   text-decoration: line-through;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 2rem;
+}
+
+.todo-filters .filter-btn {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--Gray_50);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#items-left {
+  color: var(--Gray_50);
+  cursor: pointer;
+}
+
+#clear-completed{
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--Gray_50);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.todo-footer{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--Navy_900);
+  padding: 1.4rem 2rem;
+  border-radius: 5px;
 }
