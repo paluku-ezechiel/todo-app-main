@@ -159,6 +159,10 @@ section .main-title h1 {
   gap: 2rem;
 }
 
+.delete-btn {
+  cursor: pointer;
+}
+
 .todo-filters .filter-btn {
   border: none;
   outline: none;
@@ -173,7 +177,7 @@ section .main-title h1 {
   cursor: pointer;
 }
 
-#clear-completed{
+#clear-completed {
   border: none;
   outline: none;
   background: none;
@@ -182,11 +186,26 @@ section .main-title h1 {
   cursor: pointer;
 }
 
-.todo-footer{
+.todo-footer {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   background: var(--Navy_900);
   padding: 1.4rem 2rem;
   border-radius: 5px;
+}
+
+#todo-footer{
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  #todo-footer{
+    display: block;
+  }
+
+  .none .filter-btn{
+    display: none;
+  }
 }

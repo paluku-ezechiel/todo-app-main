@@ -60,22 +60,41 @@
               <span class="circle-decoration"></span>
               <p class="todo-text">Complite online JavaScript course</p>
             </div>
-            <button class="delete-btn">
+            <button class="delete-todo">
               <img src="./images/icon-cross.svg" alt="delete todo" />
             </button>
           </li> -->
         </ul>
         <div class="todo-footer">
           <span id="items-left"></span>
-          
+
+          <!-- Filtres (Souvent déportés en dessous sur Mobile, mais côte à côte sur Desktop) -->
+          <div class="todo-filters none">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">
+              Completed
+            </button>
+          </div>
+
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+
+        <!-- ===================== -->
+      </section>
+      <section id="todo-footer">
+        <div class="todo-footer">
+          <!-- <span id="items-left"></span> -->
           <!-- Filtres (Souvent déportés en dessous sur Mobile, mais côte à côte sur Desktop) -->
           <div class="todo-filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="active">Active</button>
-            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="completed">
+              Completed
+            </button>
           </div>
-      
-          <button id="clear-completed">Clear Completed</button>
+
+          <!-- <button id="clear-completed">Clear Completed</button> -->
         </div>
       </section>
     </main>
@@ -97,6 +116,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </footer>
     .
-    <script src="./js/index.js"></script>
+    <script src="./js/exercice.js"></script>
   </body>
 </html>
