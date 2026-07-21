@@ -1,5 +1,5 @@
 const ul = document.querySelector("#todo-list");
-let clearComplete = document.querySelector("#clear-completed");
+const clearComplete = document.querySelector("#clear-completed");
 const filterBtn = document.querySelectorAll(".filter-btn");
 let currentFilter = "all";
 
@@ -125,9 +125,9 @@ const deleteTodoElement = (id) => {
 };
 
 const toggleCircleTodo = (id) => {
-  const todo = todos.find((el) => el.id === id);
-  if (todo) {
-    todo.completed = !todo.completed;
+  const todoCircle = todos.find((el) => el.id === id);
+  if (todoCircle) {
+    todoCircle.completed = !todoCircle.completed;
   } else {
     console.log("Erreur: Aucun todo trouvé avec l'id", id);
   }
