@@ -107,7 +107,7 @@ const createTodoElement = (todo) => {
 
 const addTodo = (text) => {
   todos.push({
-    id: new Date(),
+    id: new Date.now(),
     text,
     completed: false,
   });
